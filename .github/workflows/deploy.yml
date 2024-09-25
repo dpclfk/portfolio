@@ -1,0 +1,49 @@
+name: Deploy project
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  depoly_front:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout repository
+        uses: actions/checkout@v4
+
+      - name: Add SSH key
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: ${{ secrets.EC2_KEY }}
+
+      - name: Ensute SSH directory exists
+        run: |
+          mkdir -p ~/.ssh
+          chmod 700 ~/.ssh
+
+      - name: ADD SSH known hosts
+        run: ssh-keyscan -H ${{ secrets.EC2_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Install Dependencies of Portfolio
+        working-directory: ./portfolio
+        run: npm i
+
+      - name: Build Front
+        working-directory: ./portfolio
+        run: npm run build
+
+      - name: Delete map front
+        working-directory: ./portfolio/build
+        run: rm -rf ./**/*/*.map
+
+      - name: Copy Files to EC2
+        run: |
+          ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} '
+            rm -rf /var/www/portfolio/front
+            mkdir /var/www/portfolio/front'
+          rsync -avz -e "ssh" ./portfolio/build/ ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }}:/var/www/portfolio/front
+
+      - name: Restart Nginx
+        run: ssh ${{ secrets.EC2_USER }}@${{ secrets.EC2_HOST }} 'sudo service nginx restart'

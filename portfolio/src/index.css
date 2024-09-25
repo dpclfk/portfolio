@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .bghalf {
+    background-image: linear-gradient(to bottom, #f9f8f7 50%, #e4dfd9 50%);
+  }
+}
