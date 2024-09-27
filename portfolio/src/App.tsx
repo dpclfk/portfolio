@@ -13,10 +13,10 @@ const App = (): JSX.Element => {
       <div className="w-full">
         <Portfolio></Portfolio>
       </div>
-      <div className="w-full min-h-screen bg-bgcolor ">
+      <div className="w-full min-h-screen bg-bgcolor min-w-[80rem]">
         <Skill></Skill>
       </div>
-      <div className="w-full py-12 bg-contactcolor">
+      <div className="w-full py-12 bg-contactcolor min-w-[80rem]">
         <Contact></Contact>
       </div>
     </div>
