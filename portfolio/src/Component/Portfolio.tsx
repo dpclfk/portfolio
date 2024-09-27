@@ -34,9 +34,9 @@ const Portfolio = (): JSX.Element => {
                       window.open("https://www.dpclfk.com/market/");
                     }}
                   ></div>
-                  <div className="">
+                  <div className="absolute w-full h-[100%] flex items-center">
                     <div
-                      className="absolute w-full cursor-pointer pt-8"
+                      className="w-full cursor-pointer"
                       onMouseLeave={() => {
                         setOvermarket(false);
                       }}
@@ -134,9 +134,9 @@ const Portfolio = (): JSX.Element => {
                       window.open("https://lostarkcalc.dpclfk.com/");
                     }}
                   ></div>
-                  <div className="">
+                  <div className="absolute w-full h-[100%] flex items-center">
                     <div
-                      className="absolute w-full cursor-pointer pt-8"
+                      className="w-full cursor-pointer"
                       onMouseLeave={() => {
                         setLostarkcalc(false);
                       }}
