@@ -7,7 +7,7 @@ const Icon = ({ title, icon }: IProps): JSX.Element => {
   return (
     <div className="w-[11rem]">
       {icon}
-      <div>{title}</div>
+      <div className="font-bold">{title}</div>
     </div>
   );
 };

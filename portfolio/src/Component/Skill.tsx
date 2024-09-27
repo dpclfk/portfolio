@@ -10,7 +10,7 @@ import Icon from "./contents/Icon";
 const Skill = (): JSX.Element => {
   return (
     <div className="h-full w-full">
-      <div className="pt-8 pl-20 text-5xl pb-12">Skill</div>
+      <div className="pt-8 pl-20 text-5xl pb-12 font-bold">Skill</div>
       {/* 사용가능 언어 */}
       <div className="pt-8 pl-40 text-3xl flex gap-12 text-center items-center pb-12">
         <div className="w-[10rem] text-start">language</div>
