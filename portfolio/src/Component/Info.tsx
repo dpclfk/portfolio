@@ -2,15 +2,18 @@ import info from "../info.jpg";
 
 const Info = (): JSX.Element => {
   return (
-    <div className="flex h-screen bg-infocolor min-w-[80rem]">
+    <div className="flex h-screen bg-infocolor min-w-[80rem] text-center">
       <div className="w-[50%] flex justify-center items-center">
         <img className="w-[52vh] h-[70vh] border min-w-[52vh]" src={info} alt="내 사진" />
       </div>
       <div className="w-[50%] flex items-center">
-        <div className="text-7xl ">
-          항상 정진하는 개발자 <br />
-          <br />
-          이승배입니다.
+        <div className="text-6xl font-bold">
+          <div>
+            백엔드 개발자를 목표로삼은
+            <br />
+            <br />
+            주니어 개발자 이승배입니다.
+          </div>
         </div>
       </div>
     </div>
