@@ -23,7 +23,7 @@ const Portfolio = (): JSX.Element => {
               {overmarket ? (
                 <>
                   <div
-                    className="absolute bg-black w-full h-[20rem] opacity-50 cursor-pointer"
+                    className="absolute bg-black w-full h-[100%] opacity-50 cursor-pointer"
                     onMouseLeave={() => {
                       setOvermarket(false);
                     }}
@@ -73,7 +73,7 @@ const Portfolio = (): JSX.Element => {
                 ""
               )}
               <img
-                className="w-full h-[20rem]"
+                className="w-full h-[20%]"
                 src={market}
                 alt="market"
                 onMouseEnter={() => {
@@ -123,7 +123,7 @@ const Portfolio = (): JSX.Element => {
               {lostarkcalc ? (
                 <>
                   <div
-                    className="absolute bg-black w-full h-[20rem] opacity-50 cursor-pointer"
+                    className="absolute bg-black w-full h-[100%] opacity-50 cursor-pointer"
                     onMouseLeave={() => {
                       setLostarkcalc(false);
                     }}
@@ -172,7 +172,7 @@ const Portfolio = (): JSX.Element => {
                 ""
               )}
               <img
-                className="w-full h-[20rem]"
+                className="w-full h-[20%]"
                 src={calc}
                 alt="calc"
                 onMouseEnter={() => {
