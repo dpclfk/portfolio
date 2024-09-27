@@ -1,15 +1,3 @@
-// import reactlogo from "../IconImg/logo192.png";
-// import tailwindlogo from "../IconImg/tailwind.jpg";
-// import nestjslogo from "../IconImg/nestjs.png";
-// import htmllogo from "../IconImg/HTML.svg";
-// import csslogo from "../IconImg/CSS.svg";
-// import JSlogo from "../IconImg/JavaScript.png";
-// import TSlogo from "../IconImg/Typescript.png";
-// import MySQLlogo from "../IconImg/MySQL.svg";
-// import MongoDBlogo from "../IconImg/MongoDB.svg";
-// import workbenchlogo from "../IconImg/MySQLWorkbench.png";
-// import sequelizelogo from "../IconImg/sequelize.png";
-// import NodeJslogo from "../IconImg/NodeJs.svg";
 import { FaReact, FaHtml5 } from "react-icons/fa";
 import { RiTailwindCssFill, RiNodejsLine, RiJavascriptFill } from "react-icons/ri";
 import { IoLogoCss3 } from "react-icons/io5";

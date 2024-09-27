@@ -10,7 +10,7 @@ const App = (): JSX.Element => {
       <div className="w-full min-h-screen bg-infocolor">
         <Info></Info>
       </div>
-      <div className="w-full min-h-screen">
+      <div className="w-full">
         <Portfolio></Portfolio>
       </div>
       <div className="w-full min-h-screen bg-bgcolor ">
