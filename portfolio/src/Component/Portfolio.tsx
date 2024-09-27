@@ -19,33 +19,38 @@ const Portfolio = (): JSX.Element => {
         <div className="flex items-center justify-evenly overflow-hidden pb-20 items-center min-w-[80rem]">
           <div className="text-center w-[35%] h-[40%] mb-4 min-w-[30rem] relative">
             <div className="text-3xl font-bold pb-4">이미지 클릭시 프로젝트 사이트로 이동</div>
-            <div className="w-full h-full relative">
+            <div
+              className="w-full h-full relative cursor-pointer"
+              onMouseEnter={() => {
+                setOvermarket(true);
+              }}
+              onMouseLeave={() => {
+                setOvermarket(false);
+              }}
+              onClick={() => {
+                window.open("https://www.dpclfk.com/market/");
+              }}
+            >
               {overmarket ? (
                 <>
                   <div
                     className="absolute bg-black w-full h-[100%] opacity-50 cursor-pointer"
-                    onMouseLeave={() => {
-                      setOvermarket(false);
-                    }}
-                    onMouseEnter={() => {
-                      setOvermarket(true);
-                    }}
-                    onClick={() => {
-                      window.open("https://www.dpclfk.com/market/");
-                    }}
+                    // onMouseLeave={() => {
+                    //   setOvermarket(false);
+                    // }}
+                    // onMouseEnter={() => {
+                    //   setOvermarket(true);
+                    // }}
                   ></div>
                   <div className="absolute w-full h-[100%] flex items-center">
                     <div
                       className="w-full cursor-pointer"
-                      onMouseLeave={() => {
-                        setOvermarket(false);
-                      }}
-                      onMouseEnter={() => {
-                        setOvermarket(true);
-                      }}
-                      onClick={() => {
-                        window.open("https://www.dpclfk.com/market/");
-                      }}
+                      // onMouseLeave={() => {
+                      //   setOvermarket(false);
+                      // }}
+                      // onMouseEnter={() => {
+                      //   setOvermarket(true);
+                      // }}
                     >
                       <div className="text-xl font-bold text-white">Hamster Market</div>
                       <div className="flex justify-center">
@@ -72,14 +77,7 @@ const Portfolio = (): JSX.Element => {
               ) : (
                 ""
               )}
-              <img
-                className="w-full h-[20%]"
-                src={market}
-                alt="market"
-                onMouseEnter={() => {
-                  setOvermarket(true);
-                }}
-              />
+              <img className="w-full h-[20%]" src={market} alt="market" />
             </div>
             {/* <div className="font-bold pt-4">
               미션가이드에 따라 택배사가 <br />
@@ -119,34 +117,23 @@ const Portfolio = (): JSX.Element => {
           </div>
           <div className="text-3xl text-center w-[35%] h-[40%] mb-4 min-w-[30rem]">
             <div className="font-bold pb-4">이미지 클릭시 프로젝트 사이트로 이동</div>
-            <div className="w-full h-full relative">
+            <div
+              className="w-full h-full relative cursor-pointer"
+              onMouseEnter={() => {
+                setLostarkcalc(true);
+              }}
+              onMouseLeave={() => {
+                setLostarkcalc(false);
+              }}
+              onClick={() => {
+                window.open("https://lostarkcalc.dpclfk.com/");
+              }}
+            >
               {lostarkcalc ? (
                 <>
-                  <div
-                    className="absolute bg-black w-full h-[100%] opacity-50 cursor-pointer"
-                    onMouseLeave={() => {
-                      setLostarkcalc(false);
-                    }}
-                    onMouseEnter={() => {
-                      setLostarkcalc(true);
-                    }}
-                    onClick={() => {
-                      window.open("https://lostarkcalc.dpclfk.com/");
-                    }}
-                  ></div>
+                  <div className="absolute bg-black w-full h-[100%] opacity-50 cursor-pointer"></div>
                   <div className="absolute w-full h-[100%] flex items-center">
-                    <div
-                      className="w-full cursor-pointer"
-                      onMouseLeave={() => {
-                        setLostarkcalc(false);
-                      }}
-                      onMouseEnter={() => {
-                        setLostarkcalc(true);
-                      }}
-                      onClick={() => {
-                        window.open("https://lostarkcalc.dpclfk.com/");
-                      }}
-                    >
+                    <div className="w-full cursor-pointer">
                       <div className="text-xl font-bold text-white">Lostark Calc</div>
                       <div className="flex justify-center">
                         <div className="rounded h-[3px] bg-white w-[40%] my-1"></div>
@@ -171,14 +158,7 @@ const Portfolio = (): JSX.Element => {
               ) : (
                 ""
               )}
-              <img
-                className="w-full h-[20%]"
-                src={calc}
-                alt="calc"
-                onMouseEnter={() => {
-                  setLostarkcalc(true);
-                }}
-              />
+              <img className="w-full h-[20%]" src={calc} alt="calc" />
             </div>
             {/* <img
               className="w-full h-full border cursor-pointer"
