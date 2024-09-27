@@ -5,9 +5,9 @@ interface IProps {
 
 const ContactInfo = ({ title, contents }: IProps): JSX.Element => {
   return (
-    <div className="flex pb-12 px-60">
-      <div className="w-[50%]">{title}</div>
-      <div className="w-[50%] text-end">{contents}</div>
+    <div className="flex pb-12 px-40">
+      <div className="w-[30%]">{title}</div>
+      <div className="w-[70%] text-end">{contents}</div>
     </div>
   );
 };
